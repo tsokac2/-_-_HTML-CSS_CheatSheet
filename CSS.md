@@ -1,55 +1,101 @@
-<h1 align="center">HTML and CSS</h1>
+<h1 align="center">CSS</h1>
 
-## HTML 5
+### Overview of the Section
+* **[CSS Selectors](#CSS-Selectors)**
+* **[Order of specificity in CSS](#Order-of-specificity-in-CSS)**
+* **[CSS box-model](#CSS-box-model)**
+* **[CSS Positions properties](#CSS-Positions-properties)**
 
-### New features in HTML 5?
-New tags/elements:
-- ```<header>```
-- ```<nav>```
-- ```<section>```
-- ```<aside>```
+### CSS Selectors
+Here are some common types of CSS selectors:
 
-```preventDefault()``` - prevents the default behavior of HTML and events in connection with forms submitted.
+1. **Element Selector:** Selects all instances of a specified HTML element. For example, ``p`` selects all paragraph elements.
+
+		```
+		p {
+			color: blue;
+		}
+		```
+
+2. **ID Selector:** Selects a single element with a specified ID attribute. It is denoted by a hash symbol ``(#)``. For example, #header selects the element with the ID ``"header"``.
+
+		#header {
+			background-color: gray;
+		}
 
 
-### Difference between inline and inline-block elements?
-```display: inline-block;``` allows to set a *width* and *height* on the element.<br/>
-```display: inline;``` - can't define *width* and *height* on the element.
+3. **Class Selector:** Selects all elements with a specified class attribute. It is denoted by a period ``(.)``. For example, .button selects all elements with the class ``"button"``.
+
+		.button {
+			font-size: 16px;
+		}
 
 
-## CSS
+4. **Descendant Selector:** Selects an element that is a descendant of another specified element. It is denoted by whitespace. For example, div p selects all paragraph elements that are descendants of a ``div``.
 
-CSS Selectors?
-- **id** - unique for every element
-- **class** - can be applied to multiple elements
-- **_*_** - selects all elements in the DOM
-- `h1 {color: red;}` direct element selector
+		div p {
+			margin: 10px;
+		}
 
-### Type of CSS selectors?
-#### Descendant selector:
-```div p {color: #fff;}```
-```h1 span {color: #fff;}```
 
-#### Child selector:
-```div > p {color: #fff;}``` - direct child of ```div``` element
+5. **Child Selector:** Selects an element that is a direct child of another element. It is denoted by the greater-than symbol ``(>)``. For example, ``ul > li`` selects all list items that are direct children of a list.
 
-#### Adjacent siblings selector (+):
-```div + p {color: #fff;}``` - directly after specific parent element
+		ul > li {
+			list-style-type: square;
+		}
 
-#### General siblings - ~ Tilda:
-```div ~ p {color: red;}``` - next sibling of specific element
+6. **Attribute Selector:** Selects elements based on the presence or value of their attributes. For example, ``input[type="text"]`` selects all text input elements.
 
-### CSS box-model?
+		input[type="text"] {
+			border: 1px solid #ccc;
+		}
+
+7. **Pseudo-class Selector:** Selects elements based on their state or position. For example, ``:hover`` selects an element when the user hovers over it.
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Order of specificity in CSS
+Here's the ascending order of specificity:
+
+1. **Universal selectors** (*) **and combinators** (+, >, ~, ): These have the lowest specificity.
+2. **Type selectors (e.g., h1, p, div): These are the basic CSS selectors that select elements based on their type.
+
+3. **Class selectors** ```(.className)```, **attributes selectors** ``([type="checkbox"])``, **and pseudo-classes** ``(:hover, :focus)``: These have higher specificity than type selectors.
+
+4. **ID selectors** ``(#idName)``: These are more specific than class, attribute, and pseudo-class selectors.
+
+5. **Inline styles** ``(style="")``: Inline styles added to HTML elements directly have a higher specificity than any selectors in your external or internal stylesheet.
+
+6. **``!important``**: This rule overrides all other styles and should only be used as a last resort.
+
+Remember that if two rules have the same level of specificity, the one that **comes last in the CSS document** will be the one that gets applied.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### CSS box-model
+
 Margin <br/>
 Padding <br/>
 Border <br/>
 Content
 
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+
 ### CSS viewport?
 The visible area of a webpage - 1000px  = 10px = 1vh<br/>
 Viewport height - 1vh = 1% of viewport height 1vh = 1%
 
-### CSS Positions properties?
+
+
+### CSS Positions properties
 
 #### ```position: static;``` 
 **Static** by default - always positioned according to the normal flow of the page.
