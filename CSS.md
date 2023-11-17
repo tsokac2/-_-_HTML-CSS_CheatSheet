@@ -80,11 +80,29 @@ Remember that if two rules have the same level of specificity, the one that **co
 
 ### CSS box-model
 
-Margin <br/>
-Padding <br/>
-Border <br/>
-Content
+Here's a brief explanation of the box model components:
 
+	Margin <br/>
+		Border <br/>
+			Padding <br/>
+				Content
+
+1. **Margin:** Clears an area outside the border. It is transparent and contributes to spacing between elements.
+
+2. **Border:** A border surrounding the padding (if any) and content. It can have properties like width, style, and color.
+
+3. **Padding:** Clears an area around the content inside the box. It is transparent and usually has a background color.
+
+4. **Content:** The actual content of the box, where text and images appear. It has width and height properties.
+```
+   .example-box {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 2px solid #3498db;
+      margin: 30px;
+    }
+```
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
