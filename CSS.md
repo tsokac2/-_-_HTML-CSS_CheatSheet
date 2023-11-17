@@ -4,6 +4,8 @@
 * **[CSS Selectors](#CSS-Selectors)**
 * **[Order of specificity in CSS](#Order-of-specificity-in-CSS)**
 * **[CSS box-model](#CSS-box-model)**
+* **[CSS viewport](#CSS-viewport)**
+* **[CSS Measurement Units](#CSS-viewport)**
 * **[CSS Positions properties](#CSS-Positions-properties)**
 
 ### CSS Selectors
@@ -106,13 +108,45 @@ Here's a brief explanation of the box model components:
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### CSS viewport
 
-### CSS viewport?
-The visible area of a webpage - 1000px  = 10px = 1vh<br/>
-Viewport height - 1vh = 1% of viewport height 1vh = 1%
+Viewport units are a set of CSS units that relate to the dimensions of the viewport, the browser window or the area in which the web content is displayed. 
 
+There are four primary viewport units:
 
+- ``vw`` (viewport width): This unit is equal to 1% of the viewport's width. For example, if you set an element's width to 50vw, it will take up half of the viewport's width.
 
+- ``vh`` (viewport height): Similar to vw, but it is based on the height of the viewport. 1vh is 1% of the viewport's height.
+
+- ``vmin`` This unit is relative to the smaller of the viewport's width or height. It takes the smaller dimension and is 1% of that.
+
+- ``vmax`` Like vmin, but it's relative to the larger of the viewport's width or height. It is 1% of the larger dimension
+
+Using viewport units is particularly useful for creating responsive layouts that adapt to different screen sizes.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+### CSS Measurement Units
+
+CSS provides various measurement units for specifying sizes, distances, and other dimensions. The commonly used measurement units include:
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+### CSS Positions properties
+
+- **Pixels** ``(px)``: A pixel is a single point on a screen. 
+It's a fixed-size unit and is commonly used for specifying sizes in a way that is consistent across different devices.
+
+- **Percentage** ``(%)``: Percentages are often used in relation to the size of the parent element. For example, setting a width to 50% means the element will take up half the width of its containing element.
+
+- **Em** The ``em`` unit is relative to the font-size of the closest parent or the element itself. It is particularly useful for creating scalable and accessible designs.
+
+- ``Rem`` Similar to em, but it is relative to the root element (html) rather than the closest parent. This makes rem units particularly handy for maintaining consistent spacing and sizing across the entire document.
+
+- Inches (in), Centimeters (cm), Millimeters (mm): These units allow you to specify sizes in physical units, which can be useful for print stylesheets.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 ### CSS Positions properties
 
 #### ```position: static;``` 
@@ -129,6 +163,8 @@ Viewport height - 1vh = 1% of viewport height 1vh = 1%
 
 #### ```position: sticky;```
 **Sticky** is positioned based on the user's scroll position.
+
+
 
 
 ### CSS pseudo-element?
