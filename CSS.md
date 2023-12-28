@@ -8,6 +8,9 @@
 * **[CSS Measurement Units](#CSS-viewport)**
 * **[CSS Positions properties](#CSS-Positions-properties)**
 
+* **[CSS display vs visibility](#CSS-display-vs-visibility)**
+
+#
 ### CSS Selectors
 Here are some common types of CSS selectors:
 
@@ -164,7 +167,22 @@ It's a fixed-size unit and is commonly used for specifying sizes in a way that i
 #### ```position: sticky;```
 **Sticky** is positioned based on the user's scroll position.
 
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
+### CSS display vs visibility
+
+Let's delve into the distinctions between display: none; and visibility: hidden; in CSS.
+
+#### ``display: none;:``
+- **Effect:** This property completely removes the element from the layout, meaning it's as if the element doesn't exist in the document flow.
+- **Space:** The space that the element would have occupied is also removed, causing other elements to adjust accordingly.
+- **Interactivity:** The element and its child elements are not interactive, as they are essentially not rendered on the page.
+
+#### ``visibility: hidden;``
+- **Effect:** This property hides the element, but the space it occupies is still reserved in the layout.
+- **Space:** The element is still present in the document flow, maintaining the space it would occupy if it were visible.
+- **Interactivity:** The element is not visible, but it is still interactive, and its child elements are also rendered.
 
 
 ### CSS pseudo-element?
